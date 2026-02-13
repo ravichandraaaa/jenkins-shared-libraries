@@ -1,3 +1,7 @@
-def call(String url, String branch){
-  git url: "${url}", branch: "${branch}"
+def call(String repoUrl, String branch="master") {
+
+    echo "Cloning repository: ${repoUrl}"
+
+    git branch: branch, url: repoUrl
+
 }
